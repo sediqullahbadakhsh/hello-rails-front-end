@@ -1,6 +1,6 @@
-const GET_GREETING = "hello-rails-react/greeting/GET_GREETINGS";
+const GET_GREETING = 'hello-rails-react/greeting/GET_GREETINGS';
 
-const initialState = "";
+const initialState = '';
 
 const greetingReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -19,7 +19,7 @@ export const getMessage = (payload) => ({
 });
 
 export const getGreeting = () => async (dispatch) => {
-  const response = await fetch("http://127.0.0.1:3000/greetings");
+  const response = await fetch('http://127.0.0.1:3000/greetings');
   const data = await response.json();
   dispatch(getMessage(data.message));
 };

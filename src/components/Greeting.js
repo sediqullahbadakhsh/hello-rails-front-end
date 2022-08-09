@@ -1,12 +1,16 @@
-import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React from 'react';
+import { useSelector } from 'react-redux';
 
 const Greeting = () => {
   const greeting = useSelector((state) => state.greeting);
 
   return (
     <div>
-      <h1> {greeting} </h1>
+      <h1>
+        {' '}
+        {greeting}
+        {' '}
+      </h1>
     </div>
   );
 };
